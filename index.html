@@ -1,16 +1,27 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
   <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the Alphabet Game</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
   </head>
   <body>
-    <h1>Guess the Alphabet Game</h1>
-    <p>Guess an alphabet:</p>
-    <input type="text" id="guessInput" />
-    <button onclick="checkGuess()">Check</button>
-    <p id="message"></p>
+    <section class="game">
+      <h1>Guess the Alphabet Game</h1>
+      <p><h2>Guess an alphabet:</h2></p>
+      <input type="text" id="guessInput" onkeydown="if(event.keyCode===13) checkGuess()" />
+      <button onclick="checkGuess()">Check</button>
+      <button onclick="resetGame()">Play Again</button>
+      <p id="message"></p>
+    </section>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
